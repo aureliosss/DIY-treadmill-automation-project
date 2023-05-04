@@ -1,5 +1,7 @@
 # DIY Treadmill Automation Project
 
+https://github.com/aureliosss/DIY-treadmill-automation-project/blob/master/video/
+
 Description:
 
 This project aims to automate a treadmill using two ESP01-S microcontrollers with Tasmota firmware, a motion sensor (MH-SR602), and four Relay-v4.0 modules. The automation is controlled by Home Assistant.
