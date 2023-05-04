@@ -1,0 +1,9 @@
+binary_sensor:
+  - unique_id: motion_sensor
+    name: "TreadmillPir Motion"
+    state_topic: "stat/my_topic/RESULT"
+    value_template: "{{ 'ON' if value_json.POWER == 'ON' else 'OFF' }}"
+    availability_topic: "tele/my_topic/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    device_class: motion

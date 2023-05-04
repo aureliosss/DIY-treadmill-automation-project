@@ -1,0 +1,14 @@
+alias: start_treadmill
+sequence:
+  - repeat:
+      count: 2
+      sequence:
+        - type: turn_on
+          device_id: 899f54d57652c93b9ecb4b49eba461b2
+          entity_id: switch.power_on
+          domain: switch
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 1
+            milliseconds: 700

@@ -1,0 +1,48 @@
+alias: Automation treadmillPirMotion
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.treadmillpir_motion
+    from: "off"
+    to: "on"
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 7
+condition:
+  - condition: state
+    entity_id: binary_sensor.treadmillpir_motion
+    state: "on"
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+    enabled: true
+action:
+  - if:
+      - condition: state
+        entity_id: binary_sensor.treadmillpir_motion
+        for:
+          hours: 0
+          minutes: 0
+          seconds: 7
+        state: "on"
+    then:
+      - service: script.1683100128119
+        data: {}
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 5
+          milliseconds: 0
+      - service: script.set_speed_3km
+        data: {}
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 5
+          milliseconds: 0
+    else:
+      - service: script.1683100329551
+        data: {}
+mode: single

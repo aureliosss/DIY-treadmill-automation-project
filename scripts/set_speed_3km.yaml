@@ -1,0 +1,10 @@
+alias: set_speed_3km
+sequence:
+  - repeat:
+      count: "77"
+      sequence:
+        - type: turn_on
+          device_id: 899f54d57652c93b9ecb4b49eba461b2
+          entity_id: switch.speed
+          domain: switch
+mode: single

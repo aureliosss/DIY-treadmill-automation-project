@@ -1,0 +1,17 @@
+alias: stop_treadmill
+sequence:
+  - type: turn_on
+    device_id: 899f54d57652c93b9ecb4b49eba461b2
+    entity_id: switch.power_off
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
+  - service: tts.google_translate_say
+    data:
+      cache: false
+      entity_id: media_player.bucatarie
+      message: Banda de alergat s-a oprit, deoarece nu mai aleargă nimeni!
+      language: ro
