@@ -1,6 +1,6 @@
 # DIY Treadmill Automation Project
 
-https://github.com/aureliosss/DIY-treadmill-automation-project/blob/master/video/
+https://youtu.be/V_Q4gVCC9HE
 
 Description:
 
